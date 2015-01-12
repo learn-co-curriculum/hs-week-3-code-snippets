@@ -27,7 +27,8 @@ require 'sinatra/activerecord/rake'
 require './config/environment' 
 ```
 
-### tweet.rb (in the app/models directory)
+### tweet.rb 
+(in the app/models directory)
 
 This is all the code that you need to create new tweets, add tweets to your database, pull saved tweets from the database and to view and change all of the tweets attributes (like user and status). Your tweet class inherits all of that functionality (and more!) from the Active Record gem. Thank you Active Record!
 
