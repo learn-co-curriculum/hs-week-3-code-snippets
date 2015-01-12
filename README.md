@@ -28,9 +28,7 @@ require './config/environment'
 ```
 
 ### environment.rb
-(in the config directory)
-
-Add this below `Bundler.require`
+(In the config directory. This should go right below `Bundler.require`.)
 
 ```ruby
 configure :development do
