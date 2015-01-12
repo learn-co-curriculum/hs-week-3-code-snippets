@@ -27,6 +27,17 @@ require 'sinatra/activerecord/rake'
 require './config/environment' 
 ```
 
+### environment.rb
+(in the config directory)
+
+Add this below `Bundler.require`
+
+```ruby
+configure :development do
+  set :database, "sqlite3:db/database.db"
+end
+```
+
 ### tweet.rb 
 (in the app/models directory)
 
