@@ -20,6 +20,8 @@ gem "rake"
 
 ### Rakefile
 
+This is all you need for now. You may want to add other rake tasks at a later date, but the rake gem automatically provides all the tasks you need to build your database. Type `rake -T` in the terminal to see a list of available tasks.
+
 ```ruby
 require 'sinatra/activerecord/rake' 
 require './config/environment' 
