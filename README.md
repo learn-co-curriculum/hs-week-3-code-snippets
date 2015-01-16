@@ -20,12 +20,14 @@ gem "rake"
 
 ### Rakefile
 
-This is all you need for now. You may want to add other rake tasks at a later date, but the rake gem automatically provides all the tasks you need to build your database. Type `rake -T` in the terminal to see a list of available tasks.
+This code is all you need in your Rakefile for now:
 
 ```ruby
 require 'sinatra/activerecord/rake' 
 require './config/environment' 
 ```
+
+The rake gem automatically provides all of the rake tasks (commands) that you need to build your database. Type `rake -T` in the terminal to see a list of available commands.
 
 ### environment.rb
 (In the config directory. This should go right below `Bundler.require`.)
@@ -36,16 +38,20 @@ configure :development do
 end
 ```
 
+This sets up a connection to the database we will be creating.
+
 ### tweet.rb 
 (in the app/models directory)
 
-This is all the code that you need to create new tweets, add tweets to your database, pull saved tweets from the database and to view and change all of the tweets attributes (like user and status). Your tweet class inherits all of that functionality (and more!) from the Active Record gem. Thank you Active Record!
+This is all the code that you need to create new tweets, add tweets to your database, pull saved tweets from the database and to view and change all of the tweets attributes (like user and status).
 
 ```ruby
 class Tweet < ActiveRecord::Base
 
 end
 ```
+
+Your tweet class inherits all of that functionality (and more!) from the Active Record gem. Thank you Active Record!
 
 ### Did you miss class?
 
