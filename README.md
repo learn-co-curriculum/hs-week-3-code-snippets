@@ -47,4 +47,7 @@ class Tweet < ActiveRecord::Base
 end
 ```
 
+### Did you miss class?
+
+If you missed class, go check out the Study Guide. It will walk you through setting up your database and creating tables to store your data.
 
