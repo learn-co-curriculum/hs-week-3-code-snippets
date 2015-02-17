@@ -18,6 +18,16 @@ gem "sinatra-activerecord"
 gem "rake"
 ```
 
+We also need to add the sqlite3 gem to your `development` group so that it looks like this:
+
+```ruby
+group :development do
+  gem "pry"
+  gem "tux"
+  gem "sqlite3"
+end
+```
+
 ### Rakefile
 
 This code is all you need in your Rakefile for now:
