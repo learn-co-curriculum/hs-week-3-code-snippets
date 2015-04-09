@@ -9,7 +9,7 @@ type: code snippets
 
 Here is the code that you will need to add to your application to get set up with ActiveRecord.
 
-### Gemfile
+### Gemfile - Code snippet 1
 (These should go right below your sinatra gem.)
 
 ```ruby 
@@ -28,18 +28,30 @@ group :development do
 end
 ```
 
-### Rakefile
+### Rakefile - Code snippet 2
 
 This code is all you need in your Rakefile for now:
 
 ```ruby
 require 'sinatra/activerecord/rake' 
-require './config/environment' 
 ```
 
 The rake gem automatically provides all of the rake tasks (commands) that you need to build your database. Type `rake -T` in the terminal to see a list of available commands.
 
-### environment.rb
+### Migration up and down methods - Code snippet 3
+```ruby
+  def up
+    create_table :tweets do |t|
+      t.string :user
+      t.string :status
+    end
+  end
+  def down
+    drop_table :tweets
+  end
+```
+
+### environment.rb  - Code Snippet 4
 (In the config directory. This should go right below `Bundler.require`.)
 
 ```ruby
@@ -50,7 +62,13 @@ end
 
 This sets up a connection to the database we will be creating.
 
-### tweet.rb 
+### Rakefile - Code snippet 5
+```ruby
+  './config/environment'
+```
+
+
+### tweet.rb - Code snippet 6
 (in the app/models directory)
 
 This is all the code that you need to create new tweets, add tweets to your database, pull saved tweets from the database and to view and change all of the tweets attributes (like user and status).
@@ -59,6 +77,17 @@ This is all the code that you need to create new tweets, add tweets to your data
 class Tweet < ActiveRecord::Base
 
 end
+```
+
+### application_controller.rb - Code snippet 7
+
+```ruby
+  POST '/tweet' do
+    tweet = Tweet.new({:user => params[:user], :status => params[:status]})
+    tweet.save
+    redirect ‘/tweets’
+  end
+
 ```
 
 Your tweet class inherits all of that functionality (and more!) from the Active Record gem. Thank you Active Record!
