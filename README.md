@@ -1,9 +1,4 @@
----
-tags: active record, kids, ruby, advanced, code snippets
-language: ruby
-level: 2
-type: code snippets
----
+
 
 ## A pinch of delicious, delicious code
 
