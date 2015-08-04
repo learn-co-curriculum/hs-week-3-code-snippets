@@ -59,7 +59,7 @@ This sets up a connection to the database we will be creating.
 
 ### Rakefile - Code snippet 5
 ```ruby
-  './config/environment'
+  require './config/environment'
 ```
 
 
