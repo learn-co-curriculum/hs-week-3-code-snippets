@@ -92,4 +92,4 @@ Your tweet class inherits all of that functionality (and more!) from the Active 
 If you missed class, go check out the Study Guide. It will walk you through setting up your database and creating tables to store your data.
 
 
-<a href='https://learn.co/lessons/hs-week-3-code-snippets' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/hs-week-3-code-snippets' title='A pinch of delicious, delicious code'>A pinch of delicious, delicious code</a> on Learn.co and start learning to code for free.</p>
